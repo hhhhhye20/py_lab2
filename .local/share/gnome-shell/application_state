@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="org.gnome.FileRoller.desktop" open-window-count="0" score="0" last-seen="1585925525"/>
+    <application id="firefox.desktop" open-window-count="1" score="817.34375" last-seen="1587558732"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="1" score="9.765625" last-seen="1587848993"/>
+    <application id="update-manager.desktop" open-window-count="0" score="2.3125" last-seen="1587848905"/>
+    <application id="rhythmbox.desktop" open-window-count="1" score="0" last-seen="1587848900"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="0" score="0.015625" last-seen="1585923626"/>
+    <application id="gnome-terminal.desktop" open-window-count="0" score="0" last-seen="0"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="21017.71875" last-seen="1587848994"/>
+    <application id="org.gnome.Shell.PortalHelper.desktop" open-window-count="0" score="2.515625" last-seen="1585643732"/>
+    <application id="gnome-initial-setup.desktop" open-window-count="0" score="169.40625" last-seen="1584947377"/>
+    <application id="org.gnome.Software.desktop" open-window-count="1" score="1.640625" last-seen="1587848894"/>
+    <application id="libreoffice-writer.desktop" open-window-count="1" score="0" last-seen="1587848899"/>
+  </context>
+</application-state>

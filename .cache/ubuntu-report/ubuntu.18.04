@@ -1,0 +1,78 @@
+{
+  "Version": "18.04",
+  "OEM": {
+    "Vendor": "VMware, Inc.",
+    "Product": "VMware Virtual Platform",
+    "Family": ""
+  },
+  "BIOS": {
+    "Vendor": "Phoenix Technologies LTD",
+    "Version": "6.00"
+  },
+  "CPU": {
+    "OpMode": "32-bit, 64-bit",
+    "CPUs": "1",
+    "Threads": "1",
+    "Cores": "1",
+    "Sockets": "1",
+    "Vendor": "GenuineIntel",
+    "Family": "6",
+    "Model": "78",
+    "Stepping": "3",
+    "Name": "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
+    "Hypervisor": "VMware",
+    "VirtualizationType": "full"
+  },
+  "Arch": "amd64",
+  "GPU": [
+    {
+      "Vendor": "15ad",
+      "Model": "0405"
+    }
+  ],
+  "RAM": 2,
+  "Disks": [
+    42.9
+  ],
+  "Partitions": [
+    41
+  ],
+  "Screens": [
+    {
+      "Size": "0mmx0mm",
+      "Resolution": "800x600",
+      "Frequency": "60.00"
+    }
+  ],
+  "Autologin": false,
+  "LivePatch": false,
+  "Session": {
+    "DE": "ubuntu:GNOME",
+    "Name": "ubuntu",
+    "Type": "x11"
+  },
+  "Language": "ko_KR",
+  "Timezone": "Asia/Seoul",
+  "Install": {
+    "Media": "Ubuntu 18.04.4 LTS \"Bionic Beaver\" - Release amd64 (20200203.1)",
+    "Type": "GTK",
+    "OEM": false,
+    "PartitionMethod": "use_device",
+    "DownloadUpdates": true,
+    "Language": "ko",
+    "Minimal": false,
+    "RestrictedAddons": false,
+    "Stages": {
+      "0": "language",
+      "4": "language",
+      "77": "console_setup",
+      "87": "prepare",
+      "100": "partman",
+      "102": "start_install",
+      "132": "timezone",
+      "140": "usersetup",
+      "200": "user_done",
+      "1102": "done"
+    }
+  }
+}

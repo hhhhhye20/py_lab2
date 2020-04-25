@@ -1,0 +1,1334 @@
+/*************************************************************************
+ * 
+ * 이 JavaScript파일은 자바스크립트 이벤트와 관련해서 처리를
+ * 보다 쉽게 하기 위한 유익한 함수들로 이루어져있다.
+ *
+ * 함수에 추가적인 사항이나 수정시에는 아이맥스소프트에 
+ * 통보함으로써 수정 또는 추가적인 함수를 개발자들이  공유할 수 있도록 
+ * 재배포 할 것임을 명시한다.
+ *
+ *
+ * 수정일 : 2001-01-29
+ * 모은이 : 조인상(isjo@aimaxsoft.co.kr)
+ *
+ *************************************************************************/
+  
+/*************************************************************************
+  새로운 윈도우를 만들어 준다.
+
+  파라메터 : 링크정보, 윈도우넓이, 윈도우 높이
+*************************************************************************/
+function centerNewWin(url, winName, width, height) {
+  var wi = screen.width - width;
+  var hi = screen.height - height;
+  
+  if( wi < 0 ) wi = 0;   
+  if( hi < 0 ) hi = 0;
+  
+  var info = 'left=' + (wi/2) + ',top=' + (hi/2) + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=no,menubars=no,status=yes';
+  var newwin = window.open(url, winName, info);
+  newwin.focus();
+  return newwin;
+}
+
+ 
+
+function centerNewWin2(url, winName, width, height) {
+  var wi = screen.width - width;
+  var hi = screen.height - height;
+  
+  if( wi < 0 ) wi = 0;   
+  if( hi < 0 ) hi = 0;
+  
+  var info = 'left=' + (wi/2) + ',top=' + (hi/2) + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=auto,menubars=no,status=yes';
+  var newwin = window.open(url, winName, info);
+  newwin.focus();
+  return newwin;
+}  
+
+ 
+/*************************************************************************
+  새로운 윈도우를 만들어 준다.
+
+  파라메터 : 링크정보, 윈도우이름, 윈도우??이, 윈도우 높이
+*************************************************************************/ 
+function rightNewWin(url,winName, width,height) {
+  var wi = screen.width - width;
+  var hi = 0;
+  
+  if( wi < 0 ) wi = 0;   
+  if( hi < 0 ) hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=yes,scrollbars=auto,menubars=no,status=no';
+  var newwin = window.open(url, winName,info);
+  newwin.focus();
+  return newwin;
+} 
+
+/*************************************************************************
+  새로운 윈도우를 만들어 준다.
+
+  파라메터 : 링크정보, 윈도우??이, 윈도우 높이
+*************************************************************************/
+function leftNewWin(url, winName, width, height) {
+  var wi = 0;
+  var hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=yes,scrollbars=auto,menubars=no,status=yes';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+function leftNewWin2(url, winName, width, height) {
+  var wi = 0;
+  var hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=auto,menubars=no,status=yes';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+function leftNewWin1(url, winName, width, height) {
+  var wi = 0;
+  var hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=yes,scrollbars=yes,menubars=yes,status=yes';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+
+function calendarNewWin(url, winName, width, height, x, y) {
+  var wi = x;
+  var hi = y;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=no,menubars=no,status=no';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+
+/************************************************************************************
+   입력필드에 숫자만 입력받도록 하는 함수 
+   관련 이벤트 :  onKeyDown
+************************************************************************************/
+function isNumber(){
+
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 13) ||  // Enter key
+       
+       ( (event.keyCode >= 48) && (event.keyCode <= 57 ) ) || // 0 ~ 9
+       ( (event.keyCode >= 96) && (event.keyCode <= 105 ) )   // 0 ~ 9 in 숫자패드
+     ) {
+    event.returnValue=true;
+  }
+  else {
+    event.returnValue=false;
+  }
+}
+
+/************************************************************************************
+   입력필드에 숫자만 입력받도록 하는 함수 
+   관련 이벤트 :  onKeyPress
+************************************************************************************/
+/*
+function isReal(obj, format){
+  var tLen = format.substring(0,
+  var point = event.
+  if(
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 13) ||  // Enter key
+       (event.keyCode == 190) || // .
+       
+       ( (event.keyCode >= 48) && (event.keyCode <= 57 ) ) || // 0 ~ 9
+       ( (event.keyCode >= 96) && (event.keyCode <= 105 ) )   // 0 ~ 9 in 숫자패드
+     )
+    event.returnValue=true;
+  else
+    event.returnValue=false;
+}
+/************************************************************************************
+   입력필드에 숫자와 소수점만 입력받도록 하는 함수 
+   관련 이벤트 :  onKeyDown
+************************************************************************************/
+function isNumberOrPoint(){
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 13) ||  // Enter key
+       
+       (event.keyCode == 110) ||  // . key
+       ( getKeyCode(e) == 190) ||  // . key
+       ( (event.keyCode >= 48) && (event.keyCode <= 57 ) ) || // 0 ~ 9
+       ( (event.keyCode >= 96) && (event.keyCode <= 105 ) )   // 0 ~ 9 in 숫자패드
+     )
+    event.returnValue=true;
+  else
+    event.returnValue=false;
+}
+
+/***********************************************************************************
+  정해진 숫자만큼 문자(영숫자)를 입력하면 자동으로 다음 필드로 포커스 이동
+  입력 항목 
+            - thisTab : 작업중인 필드 객체
+            - nextTab: 다음 포커스 대상
+            - thisTabSize: 작업중인 입력필드의 size 값
+   관련 이벤트 : onKeyUp          
+***********************************************************************************/
+function tabOrder(thisTab,nextTab, thisTabSize) {
+  if((event.keyCode == 37) ||  // ← key
+     (event.keyCode == 38) ||  // ↑ key
+     (event.keyCode == 39) ||  // → key
+     (event.keyCode == 40) ||  // ↓ key
+     (event.keyCode == 35) ||  // HOME key
+     (event.keyCode == 36) ||  // END key
+     (event.keyCode == 13) ||  // Enter key
+     (event.keyCode == 229) || // mouse double click
+     (window.document.selection.createRange().text.length == thisTabSize)) { 
+    return;
+  } 
+  if (thisTab.value.length == thisTabSize) {
+    nextTab.select();
+    nextTab.focus();
+    return;
+  }
+}
+
+
+/*********************************************************************************
+   코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+   이를 위한 함수 이다.
+   입력 항목 
+          - cdObj : 코드값을 입력한 input 객체
+          - nmObj: 코드명을 출력한 input 객체
+          - cdLength :  코드 길이 
+      코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 코드명을 지운다.
+   관련이벤트 : onKeyUp
+*********************************************************************************/
+function isFullCode(cdObj, nmObj ,cdLength) {
+  if(cdObj.value.length != cdLength) {
+    nmObj.value="";
+  }
+}
+
+/*********************************************************************************
+   코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+   이를 위한 함수 이다.
+   입력 항목 
+          - cdObj : 코드값을 입력한 input 객체
+          - nmObj: 코드명을 출력한 input 객체의 스트링 이름(','로 분리된다.)
+          - cdLength :  코드 길이 
+      코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 코드명을 지운다.
+   관련이벤트 : onKeyUp
+*********************************************************************************/
+function isFullCode2(cdObj, nmObj ,cdLength) {
+  
+  if(cdObj.value.length != cdLength) {
+    var nmObjs = nmObj.split(",");
+    for(var i = 0; i < nmObjs.length; i++) {
+      eval(nmObjs[i]).value="";
+    }
+  }
+}
+
+/*********************************************************************************
+   코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+   이를 위한 함수 이다.
+   입력 항목 
+          - cdObj : 코드값을 입력한 input 객체
+          - nmObj: 코드명을 출력한 select 객체의 스트링 이름(','로 분리된다.)
+          - cdLength :  코드 길이 
+      코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 select객체를 초기화시킨다.
+   관련이벤트 : onKeyUp
+*********************************************************************************/
+function isSFullCode(cdObj, nmObj, cdLength) {
+  if(cdObj.value.length != cdLength) {
+    mnObj.selectedIndex = 0;
+  }
+}
+
+/*********************************************************************************
+코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+이를 위한 함수 이다.
+입력 항목 
+       - cdObj : 코드값을 입력한 input 객체
+       - nmObj: 코드명을 출력한 input 객체
+       - cdLength :  코드 길이 
+   코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 코드명을 지운다.
+관련이벤트 : onKeyUp
+*********************************************************************************/
+function isFullCodeHtml(cdObj, nmObj, tmpNmObj, cdLength) {
+ 
+  if(document.getElementById(cdObj).value.length != cdLength) {
+    document.getElementById(nmObj).innerHTML="";
+    document.getElementById(tmpNmObj).value="";
+  }
+}
+
+/***************************************************************************
+   Input type="Text"를 돈에 관련된 내용으로 사용
+   돈에 '100,000'과 같이 ','을 추가 시켜준다.
+  
+   Event Handlers : onBlur  
+   관련 함수 : removeFormattedMoney(), isNumber(), util.js::reverse()
+   사용 방법 : onBlur="formattedMoney(this)"
+***************************************************************************/
+function formattedMoney(v) {
+  var format = "";
+  var money = v.value;
+
+  money = reverse(money);
+  for(var i = money.length-1; i > -1; i--) {
+    if((i+1)%3 == 0 && money.length-1 != i) format += ",";
+    format += money.charAt(i);
+  }
+  v.value = format;
+}
+
+/***************************************************************************
+Input type="Text"를 돈에 관련된 내용으로 사용
+돈에 '100,000'과 같이 ','을 추가 시켜준다.
+
+Event Handlers : onBlur  
+관련 함수 : isNumber()
+사용 방법 : onBlur="formattedDate(this)"
+***************************************************************************/
+function formattedDate(v) {
+
+  var d = v.value;
+ 
+  if(d.length == 8) {
+    d = d.substring(0,4)+"."+d.substring(4,6)+"."+d.substring(6);
+  }
+  else if(d.length == 5) {
+    d = d.substring(0,4)+".0"+d.substring(4,5);
+  }
+  else if(d.length == 6) {
+    d = d.substring(0,4)+".0"+d.substring(4,5)+".0"+d.substring(5); 
+  }
+  else if(d.length == 7) {
+    d = d.substring(0,4)+".0"+d.substring(4,5)+"."+d.substring(5);  
+    } 
+  
+  v.value = d;
+}
+
+/*************************************************************************
+Input type="Text"를 돈에 관련된 내용으로 사용    
+formattedMoney에서 사용된 ','을 제거 시켜준다.
+
+Event Handlers : onFocus
+관련타입 : text
+관련함수 : formattedDate(), isNumber(), util.js:unFormat();
+예제방법 :  onFocus="removeFormattedDate(this)"
+**************************************************************************/
+function removeFormattedDate(v) {
+  var d = unFormat(v.value);
+  v.value = d;
+  v.select();
+}
+
+
+
+
+/*************************************************************************
+   Input type="Text"를 돈에 관련된 내용으로 사용    
+   formattedMoney에서 사용된 ','을 제거 시켜준다.
+  
+   Event Handlers : onFocus
+   관련타입 : text
+   관련함수 : formattedMoney(), isNumber()
+   예제방법 :  onFocus="removeFormattedMoney(this)"
+**************************************************************************/
+function removeFormattedMoney(v) {
+  var unformat = "";
+  var money = v.value;
+  var arr = money.split(",");
+  for(var i = 0; i < arr.length; i++) {
+    unformat += arr[i];
+  }
+  v.value = unformat;
+  v.select();
+}
+
+
+/**********************************************************************************
+  이프로그램은 리스트의 색상과 커서를 변형시키는 기능을 담당하고 있다.
+ 
+  관련이벤트 : onMouseOver, onMouseOut, onClick
+  관련stylesheet :
+  tr { defaultColor:#ffffff; onMouseColor:#F7FAFE; selecctedColor:#D6E2F2 }
+
+  ex) <tr> 태그나 <td> 태그에 다음과 같이 사용할 수 있다.
+      onClick시 특별한 행동을 하기위해서는 onClick 에 추가적으로 함수를 호출하면 된다.
+      <td onMouseOver='mouseOverCell(this)' 
+          onMouseOut='mouseOutCell(this)' 
+          onClick='selectedCell(this)'>항목</td>
+      
+***********************************************************************************/
+ 
+
+function unSelectedCell(prevObj, pColor)
+{
+  if( prevObj != null )
+  {
+    prevObj.style.background = pColor;
+    //prevObj.style.background = "#ffffff";
+    //prevObj.style.background = (msieversion() < 5 ? '#ffffff' : prevObj.currentStyle.defaultColor);
+    //prevObj.style.color      = (msieversion() < 5 ? '#000000' : prevObj.currentStyle.defaultFontColor);
+    prevObj = null;
+  }
+}
+
+function selectedCell(prevObj, obj, pColor, cColor) {
+ 
+  if( prevObj == null ) {
+    prevObj = obj;
+    prevObj.style.background = cColor;
+    //prevObj.style.background = "#ECD7D7";
+    //prevObj.style.background = (msieversion() < 5 ? '#ECD7D7' : obj.currentStyle.selecctedColor);
+    //prevObj.style.color      = (msieversion() < 5 ? '#000000' : obj.currentStyle.selecctedFontColor);
+  }
+  else {
+    prevObj.style.background = pColor;
+    obj.style.background = cColor;    
+    //prevObj.style.background = "#ffffff";
+    //obj.style.background = "#ECD7D7";
+    //prevObj.style.background = (msieversion() < 5 ? '#ffffff' : obj.currentStyle.defaultColor);
+    //prevObj.style.color      = (msieversion() < 5 ? '#000000' : obj.currentStyle.defaultFontColor);
+    
+    //obj.style.background     = (msieversion() < 5 ? '#ECD7D7' : obj.currentStyle.selecctedColor);
+    //obj.style.color          = (msieversion() < 5 ? '#ffffff' : obj.currentStyle.selecctedFontColor);
+    prevObj = obj;
+  }
+  return prevObj;
+}
+
+function mouseOverCell(prevObj, obj,cColor) {
+
+  if( prevObj != obj ) {
+    //obj.style.background = (msieversion() > 5 ? '#F8F2F2' : obj.currentStyle.onMouseColor);
+    //obj.style.background = "#F8F2F2";
+    obj.style.background = cColor;
+  }
+   obj.style.cursor = "pointer";
+
+}
+
+function mouseOutCell(prevObj, obj,cColor) {
+ 
+  if( prevObj != obj ) {
+    obj.style.background = cColor;
+    //obj.style.background = (msieversion() < 5 ? '#ffffff' : obj.currentStyle.defaultColor);
+    //obj.style.background = "#ffffff";
+  }
+  obj.style.cursor = "auto";
+}
+
+/*
+TR Element 찾기
+*/
+function searchTR(o) {
+  return o.nodeName == "TR" ? o : searchTR(o.parentNode);;
+}
+
+ 
+
+function msieversion()
+// Return Microsoft Internet Explorer (major) version number, or 0 for others.
+// This function works by finding the "MSIE " string and extracting the version number
+// following the space, up to the decimal point for the minor version, which is ignored.
+{
+    var ua = window.navigator.userAgent
+    var msie = ua.indexOf ( "MSIE " )
+
+    if ( msie > 0 )        // is Microsoft Internet Explorer; return version number
+        return parseInt ( ua.substring ( msie+5, ua.indexOf ( ".", msie ) ) )
+    else
+        return 0    // is other browser
+}
+
+
+/************************************************************************
+   Text에 영문자 소문자를 대문자로 바꿔준다.
+   관련 이벤트 : onKeyPress
+   
+   사용법 :
+   <input type="text" onKeyPress="toUpperCase()">
+************************************************************************/   
+function toUpperCase() {
+  if(!(event.keyCode < 97 || event.keyCode > 122)) {
+    event.keyCode -= 32;
+    event.returnValue=true;
+  }
+}
+
+/************************************************************************
+   Text에 영문자 대문자를 소문자로 바꿔준다.
+   관련 이벤트 : onKeyPress
+   
+   사용법 :
+   <input type="text" onkeyPress="toLowerCase()">
+************************************************************************/   
+function toLowerCase() {
+  if(!(event.keyCode < 65 || event.keyCode > 90)) {
+    event.keyCode += 32;
+    event.returnValue=true;
+  }
+}
+
+/************************************************************************
+   Text에 최대 입력가능한 글자수를 지정한다. 
+   
+   기존 Tag에 maxLength라는 프로퍼티가 있으나 한글 한문자의 길이를 1로 인식함으로써
+   데이터베이스(한글 한자를 2바이트로 인식)와 서로 상이함으로 인해 오류를 일으킬 소지가
+   있다.
+   
+   관련 이벤트 : onKeyDown
+   관련함수 : getLength(str)
+
+   사용법 :
+   <input type="text" onkeyDown="maxLen(4)"> <- 최대 4자리 입력가능
+   
+************************************************************************/   
+function maxLen(len)
+{
+  var r = getLength(window.document.selection.createRange().text);
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       ( (event.keyCode != 229) && (r > 0) )
+     )
+    event.returnValue=true;
+  else if ( getLength(event.srcElement.value) >= len ) 
+    event.returnValue=false;
+}
+
+ 
+
+/*************************************************************************
+ * 
+ * EntryDate : 2002.07.24
+ * UpdatDate : 2002.07.24
+ * Author    : unicornx@entland.co.kr
+ *
+ *************************************************************************/
+ 
+/************************************************************************************
+ * 모든 입력 값에 대한 검증을 함
+   관련 이벤트 :  
+************************************************************************************/
+/*
+  function checkData(oForm){
+
+    var blnMore = true;
+    var i=0;
+    var checkType = 0;
+    var intMaxLen = oForm.elements.length;
+
+    while(blnMore && i < intMaxLen){
+
+      if("NT" == oForm.elements[i].chkType || "NN" == oForm.elements[i].chkType || "CT" == oForm.elements[i].chkType 
+          || "CN" == oForm.elements[i].chkType){
+
+        // 숫자 검증이라면 
+        if('N' == oForm.elements[i].chkType.charAt(0)){
+
+          if(isNaN(oForm.elements[i].value)){
+              alert("[" + oForm.elements[i].title + "]을(를) 숫자로 입력하세요.");
+              oForm.elements[i].focus();
+              blnMore = false;
+          }  
+
+          // 필수입력인지 검증
+          if(blnMore && 'T' == oForm.elements[i].chkType.charAt(1) && "" == trim(oForm.elements[i].value)){
+            alert("[" + oForm.elements[i].title +"]은(는) 필수입력 항목입니다.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          }  
+
+        // 문자 검증이라면
+        } else if('C' == oForm.elements[i].chkType.charAt(0)){
+          // 한글 문자열을 계산하여 MaxLength보다 크면 error message 출력
+          var nCurLength = getLength(oForm.elements[i].value);
+          var nMaxLength = oForm.elements[i].maxLength;
+          if( nMaxLength < nCurLength){
+            alert("[" + oForm.elements[i].title +"]이(가) 자릿수를 초과 했습니다.\n\n "+(nCurLength-nMaxLength)+"바이트 초과. [한글 "+(nMaxLength/2)+"글자, 영문 "+nMaxLength+"글자] 입력 가능\n\n다시 확인하고 입력하세요.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          }  
+
+          // 필수입력인지 검증
+          if(blnMore && 'T' == oForm.elements[i].chkType.charAt(1) && "" == trim(oForm.elements[i].value)){
+            alert("[" + oForm.elements[i].title +"]은(는) 필수입력 항목입니다.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          }  
+
+        }  
+
+      } else if("file" == oForm.elements[i].type){
+        if("" != oForm.elements[i].value){
+          // 스페이스만 포함되면 에러 출력
+          if("" != oForm.elements[i].value && "" == trim(oForm.elements[i].value)){
+            alert("파일 이름에 공백(space) 문자만 입력하면 안 됩니다.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          
+          } else if(!checkFileName(oForm.elements[i])){
+            oForm.elements[i].focus();
+            blnMore = false;              
+
+          }  
+        }  
+
+      }  
+
+      i++;
+    }  
+    
+    return blnMore;
+
+  }  
+  
+
+//에디터의 널 여부와 자리수를  체크한다.
+function checkFCKeditor(oEditor, sTitle, isCheck, nMaxLength){
+  var blnMore = true;
+
+  var div = document.createElement("DIV");
+  div.innerHTML = oEditor.GetXHTML();
+  if("T" == isCheck) {
+    if( isNull( div.innerText ) ) { 
+       alert("[" + sTitle + "]" + "을(를) 입력하세요.");  
+      oEditor.Focus();
+      return false;
+    }
+  }  
+
+  if(0 == nMaxLength){
+    return true;
+  }
+    
+  var nCurLength = getLength(div.innerHTML);
+  var nMaxLength = nMaxLength;
+ 
+  if( nMaxLength < nCurLength){
+    alert("[" + sTitle +"]이(가) 자릿수를 초과 했습니다.\n\n "+(nCurLength-nMaxLength)+"바이트 초과. [한글 "+(nMaxLength/2)+"글자, 영문 "+nMaxLength+"글자] 입력 가능\n\n다시 확인하고 입력하세요.");
+    oEditor.Focus();
+    blnMore = false;
+  }  
+
+  return blnMore; 
+}
+*/
+        20200403064753      mouseOutCell   formattedDate   isFullCodeHtml   maxLen   isSFullCode   toUpperCase   searchTR   isFullCode2   mouseOverCell   msieversion   selectedCell   centerNewWin2   isNumberOrPoint   formattedMoney   isFullCode)   removeFormattedMoney   leftNewWin   leftNewWin2   tabOrder   rightNewWin   centerNewWin'   removeFormattedDate   calendarNewWin   leftNewWin1   isNumber   toLowerCase   unSelectedCell    Z^      Z^  !         Z^  /*************************************************************************
+ * 
+ * 이 JavaScript파일은 자바스크립트 이벤트와 관련해서 처리를
+ * 보다 쉽게 하기 위한 유익한 함수들로 이루어져있다.
+ *
+ * 함수에 추가적인 사항이나 수정시에는 아이맥스소프트에 
+ * 통보함으로써 수정 또는 추가적인 함수를 개발자들이  공유할 수 있도록 
+ * 재배포 할 것임을 명시한다.
+ *
+ *
+ * 수정일 : 2001-01-29
+ * 모은이 : 조인상(isjo@aimaxsoft.co.kr)
+ *
+ *************************************************************************/
+  
+/*************************************************************************
+  새로운 윈도우를 만들어 준다.
+
+  파라메터 : 링크정보, 윈도우넓이, 윈도우 높이
+*************************************************************************/
+function centerNewWin(url, winName, width, height) {
+  var wi = screen.width - width;
+  var hi = screen.height - height;
+  
+  if( wi < 0 ) wi = 0;   
+  if( hi < 0 ) hi = 0;
+  
+  var info = 'left=' + (wi/2) + ',top=' + (hi/2) + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=no,menubars=no,status=yes';
+  var newwin = window.open(url, winName, info);
+  newwin.focus();
+  return newwin;
+}
+
+ 
+
+function centerNewWin2(url, winName, width, height) {
+  var wi = screen.width - width;
+  var hi = screen.height - height;
+  
+  if( wi < 0 ) wi = 0;   
+  if( hi < 0 ) hi = 0;
+  
+  var info = 'left=' + (wi/2) + ',top=' + (hi/2) + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=auto,menubars=no,status=yes';
+  var newwin = window.open(url, winName, info);
+  newwin.focus();
+  return newwin;
+}  
+
+ 
+/*************************************************************************
+  새로운 윈도우를 만들어 준다.
+
+  파라메터 : 링크정보, 윈도우이름, 윈도우??이, 윈도우 높이
+*************************************************************************/ 
+function rightNewWin(url,winName, width,height) {
+  var wi = screen.width - width;
+  var hi = 0;
+  
+  if( wi < 0 ) wi = 0;   
+  if( hi < 0 ) hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=yes,scrollbars=auto,menubars=no,status=no';
+  var newwin = window.open(url, winName,info);
+  newwin.focus();
+  return newwin;
+} 
+
+/*************************************************************************
+  새로운 윈도우를 만들어 준다.
+
+  파라메터 : 링크정보, 윈도우??이, 윈도우 높이
+*************************************************************************/
+function leftNewWin(url, winName, width, height) {
+  var wi = 0;
+  var hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=yes,scrollbars=auto,menubars=no,status=yes';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+function leftNewWin2(url, winName, width, height) {
+  var wi = 0;
+  var hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=auto,menubars=no,status=yes';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+function leftNewWin1(url, winName, width, height) {
+  var wi = 0;
+  var hi = 0;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=yes,scrollbars=yes,menubars=yes,status=yes';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+
+function calendarNewWin(url, winName, width, height, x, y) {
+  var wi = x;
+  var hi = y;
+  
+  var info = 'left=' + wi + ',top=' + hi + ',width='  + width + ',height=' + height + ',resizable=no,scrollbars=no,menubars=no,status=no';
+  var newwin = window.open(url,winName,info);
+  newwin.focus();
+  return newwin;
+}
+
+
+/************************************************************************************
+   입력필드에 숫자만 입력받도록 하는 함수 
+   관련 이벤트 :  onKeyDown
+************************************************************************************/
+function isNumber(){
+
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 13) ||  // Enter key
+       
+       ( (event.keyCode >= 48) && (event.keyCode <= 57 ) ) || // 0 ~ 9
+       ( (event.keyCode >= 96) && (event.keyCode <= 105 ) )   // 0 ~ 9 in 숫자패드
+     ) {
+    event.returnValue=true;
+  }
+  else {
+    event.returnValue=false;
+  }
+}
+
+/************************************************************************************
+   입력필드에 숫자만 입력받도록 하는 함수 
+   관련 이벤트 :  onKeyPress
+************************************************************************************/
+/*
+function isReal(obj, format){
+  var tLen = format.substring(0,
+  var point = event.
+  if(
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 13) ||  // Enter key
+       (event.keyCode == 190) || // .
+       
+       ( (event.keyCode >= 48) && (event.keyCode <= 57 ) ) || // 0 ~ 9
+       ( (event.keyCode >= 96) && (event.keyCode <= 105 ) )   // 0 ~ 9 in 숫자패드
+     )
+    event.returnValue=true;
+  else
+    event.returnValue=false;
+}
+/************************************************************************************
+   입력필드에 숫자와 소수점만 입력받도록 하는 함수 
+   관련 이벤트 :  onKeyDown
+************************************************************************************/
+function isNumberOrPoint(){
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 13) ||  // Enter key
+       
+       (event.keyCode == 110) ||  // . key
+       ( getKeyCode(e) == 190) ||  // . key
+       ( (event.keyCode >= 48) && (event.keyCode <= 57 ) ) || // 0 ~ 9
+       ( (event.keyCode >= 96) && (event.keyCode <= 105 ) )   // 0 ~ 9 in 숫자패드
+     )
+    event.returnValue=true;
+  else
+    event.returnValue=false;
+}
+
+/***********************************************************************************
+  정해진 숫자만큼 문자(영숫자)를 입력하면 자동으로 다음 필드로 포커스 이동
+  입력 항목 
+            - thisTab : 작업중인 필드 객체
+            - nextTab: 다음 포커스 대상
+            - thisTabSize: 작업중인 입력필드의 size 값
+   관련 이벤트 : onKeyUp          
+***********************************************************************************/
+function tabOrder(thisTab,nextTab, thisTabSize) {
+  if((event.keyCode == 37) ||  // ← key
+     (event.keyCode == 38) ||  // ↑ key
+     (event.keyCode == 39) ||  // → key
+     (event.keyCode == 40) ||  // ↓ key
+     (event.keyCode == 35) ||  // HOME key
+     (event.keyCode == 36) ||  // END key
+     (event.keyCode == 13) ||  // Enter key
+     (event.keyCode == 229) || // mouse double click
+     (window.document.selection.createRange().text.length == thisTabSize)) { 
+    return;
+  } 
+  if (thisTab.value.length == thisTabSize) {
+    nextTab.select();
+    nextTab.focus();
+    return;
+  }
+}
+
+
+/*********************************************************************************
+   코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+   이를 위한 함수 이다.
+   입력 항목 
+          - cdObj : 코드값을 입력한 input 객체
+          - nmObj: 코드명을 출력한 input 객체
+          - cdLength :  코드 길이 
+      코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 코드명을 지운다.
+   관련이벤트 : onKeyUp
+*********************************************************************************/
+function isFullCode(cdObj, nmObj ,cdLength) {
+  if(cdObj.value.length != cdLength) {
+    nmObj.value="";
+  }
+}
+
+/*********************************************************************************
+   코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+   이를 위한 함수 이다.
+   입력 항목 
+          - cdObj : 코드값을 입력한 input 객체
+          - nmObj: 코드명을 출력한 input 객체의 스트링 이름(','로 분리된다.)
+          - cdLength :  코드 길이 
+      코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 코드명을 지운다.
+   관련이벤트 : onKeyUp
+*********************************************************************************/
+function isFullCode2(cdObj, nmObj ,cdLength) {
+  
+  if(cdObj.value.length != cdLength) {
+    var nmObjs = nmObj.split(",");
+    for(var i = 0; i < nmObjs.length; i++) {
+      eval(nmObjs[i]).value="";
+    }
+  }
+}
+
+/*********************************************************************************
+   코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+   이를 위한 함수 이다.
+   입력 항목 
+          - cdObj : 코드값을 입력한 input 객체
+          - nmObj: 코드명을 출력한 select 객체의 스트링 이름(','로 분리된다.)
+          - cdLength :  코드 길이 
+      코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 select객체를 초기화시킨다.
+   관련이벤트 : onKeyUp
+*********************************************************************************/
+function isSFullCode(cdObj, nmObj, cdLength) {
+  if(cdObj.value.length != cdLength) {
+    mnObj.selectedIndex = 0;
+  }
+}
+
+/*********************************************************************************
+코드를 수정하면 자동으로 코드명이 초기 빈 상태로 되어야 한다.
+이를 위한 함수 이다.
+입력 항목 
+       - cdObj : 코드값을 입력한 input 객체
+       - nmObj: 코드명을 출력한 input 객체
+       - cdLength :  코드 길이 
+   코드길이 가  현재 입력한 코드값의 길이와 같지 않으면 코드명을 지운다.
+관련이벤트 : onKeyUp
+*********************************************************************************/
+function isFullCodeHtml(cdObj, nmObj, tmpNmObj, cdLength) {
+ 
+  if(document.getElementById(cdObj).value.length != cdLength) {
+    document.getElementById(nmObj).innerHTML="";
+    document.getElementById(tmpNmObj).value="";
+  }
+}
+
+/***************************************************************************
+   Input type="Text"를 돈에 관련된 내용으로 사용
+   돈에 '100,000'과 같이 ','을 추가 시켜준다.
+  
+   Event Handlers : onBlur  
+   관련 함수 : removeFormattedMoney(), isNumber(), util.js::reverse()
+   사용 방법 : onBlur="formattedMoney(this)"
+***************************************************************************/
+function formattedMoney(v) {
+  var format = "";
+  var money = v.value;
+
+  money = reverse(money);
+  for(var i = money.length-1; i > -1; i--) {
+    if((i+1)%3 == 0 && money.length-1 != i) format += ",";
+    format += money.charAt(i);
+  }
+  v.value = format;
+}
+
+/***************************************************************************
+Input type="Text"를 돈에 관련된 내용으로 사용
+돈에 '100,000'과 같이 ','을 추가 시켜준다.
+
+Event Handlers : onBlur  
+관련 함수 : isNumber()
+사용 방법 : onBlur="formattedDate(this)"
+***************************************************************************/
+function formattedDate(v) {
+
+  var d = v.value;
+ 
+  if(d.length == 8) {
+    d = d.substring(0,4)+"."+d.substring(4,6)+"."+d.substring(6);
+  }
+  else if(d.length == 5) {
+    d = d.substring(0,4)+".0"+d.substring(4,5);
+  }
+  else if(d.length == 6) {
+    d = d.substring(0,4)+".0"+d.substring(4,5)+".0"+d.substring(5); 
+  }
+  else if(d.length == 7) {
+    d = d.substring(0,4)+".0"+d.substring(4,5)+"."+d.substring(5);  
+    } 
+  
+  v.value = d;
+}
+
+/*************************************************************************
+Input type="Text"를 돈에 관련된 내용으로 사용    
+formattedMoney에서 사용된 ','을 제거 시켜준다.
+
+Event Handlers : onFocus
+관련타입 : text
+관련함수 : formattedDate(), isNumber(), util.js:unFormat();
+예제방법 :  onFocus="removeFormattedDate(this)"
+**************************************************************************/
+function removeFormattedDate(v) {
+  var d = unFormat(v.value);
+  v.value = d;
+  v.select();
+}
+
+
+
+
+/*************************************************************************
+   Input type="Text"를 돈에 관련된 내용으로 사용    
+   formattedMoney에서 사용된 ','을 제거 시켜준다.
+  
+   Event Handlers : onFocus
+   관련타입 : text
+   관련함수 : formattedMoney(), isNumber()
+   예제방법 :  onFocus="removeFormattedMoney(this)"
+**************************************************************************/
+function removeFormattedMoney(v) {
+  var unformat = "";
+  var money = v.value;
+  var arr = money.split(",");
+  for(var i = 0; i < arr.length; i++) {
+    unformat += arr[i];
+  }
+  v.value = unformat;
+  v.select();
+}
+
+
+/**********************************************************************************
+  이프로그램은 리스트의 색상과 커서를 변형시키는 기능을 담당하고 있다.
+ 
+  관련이벤트 : onMouseOver, onMouseOut, onClick
+  관련stylesheet :
+  tr { defaultColor:#ffffff; onMouseColor:#F7FAFE; selecctedColor:#D6E2F2 }
+
+  ex) <tr> 태그나 <td> 태그에 다음과 같이 사용할 수 있다.
+      onClick시 특별한 행동을 하기위해서는 onClick 에 추가적으로 함수를 호출하면 된다.
+      <td onMouseOver='mouseOverCell(this)' 
+          onMouseOut='mouseOutCell(this)' 
+          onClick='selectedCell(this)'>항목</td>
+      
+***********************************************************************************/
+ 
+
+function unSelectedCell(prevObj, pColor)
+{
+  if( prevObj != null )
+  {
+    prevObj.style.background = pColor;
+    //prevObj.style.background = "#ffffff";
+    //prevObj.style.background = (msieversion() < 5 ? '#ffffff' : prevObj.currentStyle.defaultColor);
+    //prevObj.style.color      = (msieversion() < 5 ? '#000000' : prevObj.currentStyle.defaultFontColor);
+    prevObj = null;
+  }
+}
+
+function selectedCell(prevObj, obj, pColor, cColor) {
+ 
+  if( prevObj == null ) {
+    prevObj = obj;
+    prevObj.style.background = cColor;
+    //prevObj.style.background = "#ECD7D7";
+    //prevObj.style.background = (msieversion() < 5 ? '#ECD7D7' : obj.currentStyle.selecctedColor);
+    //prevObj.style.color      = (msieversion() < 5 ? '#000000' : obj.currentStyle.selecctedFontColor);
+  }
+  else {
+    prevObj.style.background = pColor;
+    obj.style.background = cColor;    
+    //prevObj.style.background = "#ffffff";
+    //obj.style.background = "#ECD7D7";
+    //prevObj.style.background = (msieversion() < 5 ? '#ffffff' : obj.currentStyle.defaultColor);
+    //prevObj.style.color      = (msieversion() < 5 ? '#000000' : obj.currentStyle.defaultFontColor);
+    
+    //obj.style.background     = (msieversion() < 5 ? '#ECD7D7' : obj.currentStyle.selecctedColor);
+    //obj.style.color          = (msieversion() < 5 ? '#ffffff' : obj.currentStyle.selecctedFontColor);
+    prevObj = obj;
+  }
+  return prevObj;
+}
+
+function mouseOverCell(prevObj, obj,cColor) {
+
+  if( prevObj != obj ) {
+    //obj.style.background = (msieversion() > 5 ? '#F8F2F2' : obj.currentStyle.onMouseColor);
+    //obj.style.background = "#F8F2F2";
+    obj.style.background = cColor;
+  }
+   obj.style.cursor = "pointer";
+
+}
+
+function mouseOutCell(prevObj, obj,cColor) {
+ 
+  if( prevObj != obj ) {
+    obj.style.background = cColor;
+    //obj.style.background = (msieversion() < 5 ? '#ffffff' : obj.currentStyle.defaultColor);
+    //obj.style.background = "#ffffff";
+  }
+  obj.style.cursor = "auto";
+}
+
+/*
+TR Element 찾기
+*/
+function searchTR(o) {
+  return o.nodeName == "TR" ? o : searchTR(o.parentNode);;
+}
+
+ 
+
+function msieversion()
+// Return Microsoft Internet Explorer (major) version number, or 0 for others.
+// This function works by finding the "MSIE " string and extracting the version number
+// following the space, up to the decimal point for the minor version, which is ignored.
+{
+    var ua = window.navigator.userAgent
+    var msie = ua.indexOf ( "MSIE " )
+
+    if ( msie > 0 )        // is Microsoft Internet Explorer; return version number
+        return parseInt ( ua.substring ( msie+5, ua.indexOf ( ".", msie ) ) )
+    else
+        return 0    // is other browser
+}
+
+
+/************************************************************************
+   Text에 영문자 소문자를 대문자로 바꿔준다.
+   관련 이벤트 : onKeyPress
+   
+   사용법 :
+   <input type="text" onKeyPress="toUpperCase()">
+************************************************************************/   
+function toUpperCase() {
+  if(!(event.keyCode < 97 || event.keyCode > 122)) {
+    event.keyCode -= 32;
+    event.returnValue=true;
+  }
+}
+
+/************************************************************************
+   Text에 영문자 대문자를 소문자로 바꿔준다.
+   관련 이벤트 : onKeyPress
+   
+   사용법 :
+   <input type="text" onkeyPress="toLowerCase()">
+************************************************************************/   
+function toLowerCase() {
+  if(!(event.keyCode < 65 || event.keyCode > 90)) {
+    event.keyCode += 32;
+    event.returnValue=true;
+  }
+}
+
+/************************************************************************
+   Text에 최대 입력가능한 글자수를 지정한다. 
+   
+   기존 Tag에 maxLength라는 프로퍼티가 있으나 한글 한문자의 길이를 1로 인식함으로써
+   데이터베이스(한글 한자를 2바이트로 인식)와 서로 상이함으로 인해 오류를 일으킬 소지가
+   있다.
+   
+   관련 이벤트 : onKeyDown
+   관련함수 : getLength(str)
+
+   사용법 :
+   <input type="text" onkeyDown="maxLen(4)"> <- 최대 4자리 입력가능
+   
+************************************************************************/   
+function maxLen(len)
+{
+  var r = getLength(window.document.selection.createRange().text);
+  if ( (event.keyCode == 46) ||  // DEL
+       (event.keyCode == 8)  ||  // backspace
+       (event.keyCode == 9)  ||  // tab
+       (event.keyCode == 35) ||  // HOME key
+       (event.keyCode == 36) ||  // END key
+       (event.keyCode == 37) ||  // ← key
+       (event.keyCode == 38) ||  // ↑ key
+       (event.keyCode == 39) ||  // → key
+       (event.keyCode == 40) ||  // ↓ key
+       ( (event.keyCode != 229) && (r > 0) )
+     )
+    event.returnValue=true;
+  else if ( getLength(event.srcElement.value) >= len ) 
+    event.returnValue=false;
+}
+
+ 
+
+/*************************************************************************
+ * 
+ * EntryDate : 2002.07.24
+ * UpdatDate : 2002.07.24
+ * Author    : unicornx@entland.co.kr
+ *
+ *************************************************************************/
+ 
+/************************************************************************************
+ * 모든 입력 값에 대한 검증을 함
+   관련 이벤트 :  
+************************************************************************************/
+/*
+  function checkData(oForm){
+
+    var blnMore = true;
+    var i=0;
+    var checkType = 0;
+    var intMaxLen = oForm.elements.length;
+
+    while(blnMore && i < intMaxLen){
+
+      if("NT" == oForm.elements[i].chkType || "NN" == oForm.elements[i].chkType || "CT" == oForm.elements[i].chkType 
+          || "CN" == oForm.elements[i].chkType){
+
+        // 숫자 검증이라면 
+        if('N' == oForm.elements[i].chkType.charAt(0)){
+
+          if(isNaN(oForm.elements[i].value)){
+              alert("[" + oForm.elements[i].title + "]을(를) 숫자로 입력하세요.");
+              oForm.elements[i].focus();
+              blnMore = false;
+          }  
+
+          // 필수입력인지 검증
+          if(blnMore && 'T' == oForm.elements[i].chkType.charAt(1) && "" == trim(oForm.elements[i].value)){
+            alert("[" + oForm.elements[i].title +"]은(는) 필수입력 항목입니다.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          }  
+
+        // 문자 검증이라면
+        } else if('C' == oForm.elements[i].chkType.charAt(0)){
+          // 한글 문자열을 계산하여 MaxLength보다 크면 error message 출력
+          var nCurLength = getLength(oForm.elements[i].value);
+          var nMaxLength = oForm.elements[i].maxLength;
+          if( nMaxLength < nCurLength){
+            alert("[" + oForm.elements[i].title +"]이(가) 자릿수를 초과 했습니다.\n\n "+(nCurLength-nMaxLength)+"바이트 초과. [한글 "+(nMaxLength/2)+"글자, 영문 "+nMaxLength+"글자] 입력 가능\n\n다시 확인하고 입력하세요.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          }  
+
+          // 필수입력인지 검증
+          if(blnMore && 'T' == oForm.elements[i].chkType.charAt(1) && "" == trim(oForm.elements[i].value)){
+            alert("[" + oForm.elements[i].title +"]은(는) 필수입력 항목입니다.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          }  
+
+        }  
+
+      } else if("file" == oForm.elements[i].type){
+        if("" != oForm.elements[i].value){
+          // 스페이스만 포함되면 에러 출력
+          if("" != oForm.elements[i].value && "" == trim(oForm.elements[i].value)){
+            alert("파일 이름에 공백(space) 문자만 입력하면 안 됩니다.");
+            oForm.elements[i].focus();
+            blnMore = false;
+          
+          } else if(!checkFileName(oForm.elements[i])){
+            oForm.elements[i].focus();
+            blnMore = false;              
+
+          }  
+        }  
+
+      }  
+
+      i++;
+    }  
+    
+    return blnMore;
+
+  }  
+  
+
+//에디터의 널 여부와 자리수를  체크한다.
+function checkFCKeditor(oEditor, sTitle, isCheck, nMaxLength){
+  var blnMore = true;
+
+  var div = document.createElement("DIV");
+  div.innerHTML = oEditor.GetXHTML();
+  if("T" == isCheck) {
+    if( isNull( div.innerText ) ) { 
+       alert("[" + sTitle + "]" + "을(를) 입력하세요.");  
+      oEditor.Focus();
+      return false;
+    }
+  }  
+
+  if(0 == nMaxLength){
+    return true;
+  }
+    
+  var nCurLength = getLength(div.innerHTML);
+  var nMaxLength = nMaxLength;
+ 
+  if( nMaxLength < nCurLength){
+    alert("[" + sTitle +"]이(가) 자릿수를 초과 했습니다.\n\n "+(nCurLength-nMaxLength)+"바이트 초과. [한글 "+(nMaxLength/2)+"글자, 영문 "+nMaxLength+"글자] 입력 가능\n\n다시 확인하고 입력하세요.");
+    oEditor.Focus();
+    blnMore = false;
+  }  
+
+  return blnMore; 
+}
+*/
+  /   http://lms.knu.ac.kr/ilos/js/ctrl.js?v=20200407   �!�!�!�!����                               	   
+                                                         �!�!�!�!     �    �  (  �  (              �5��!�!�!�!     �    G  �  1  �  $            �5��!�!�!�!     �      }	  �  }	  7            �5��!�!�!�!     �    �
+  �  �
+  �  I            �5��!�!�!�!     �    �    �    S            �5��!�!�!�!     �      C    C  ]            �5��!�!�!�!     �    `  �  I  �  h            �5��!�!�!�!      �    �  w  �  w  w            �5��!�!�!�!      �    �    �    �            �5��!�!�!�!     �      q     q   �            �5��!�!�!�!     �    �"  B#  �"  B#  �            �5��!�!�!�!     �    �%  �&  �%  �&  �      `
+     �5��!�!�!�!     �    M)  �)  9)  �)             �5��!�!�!�!     �    ,  �,  �+  �,             �5��!�!�!�!     �    �.  �/  �.  �/  .           �5��!�!�!�!     �    81  �2  "1  �2  B           �5��!�!�!�!     �    �4  5  �4  5  _           �5��!�!�!�!     �    �6  �7  �6  �7  q           �5��!�!�!�!     �    �:  Q<  �:  Q<  �           �5��!�!�!�!     � 
+   j<  a@  U<  a@  �           �5��!�!�!�!     �    {@  �A  e@  �A  �           �5��!�!�!�!     �     �A  �B  �A  �B  �           �5��!�!�!�!     �    �B  C  �B  C  �           �5��!�!�!�!      � 	   6C  iE  "C  iE  �           �5��!�!�!�!      �    �F  =G  �F  =G  �           �5��!�!�!�!      �    �H  I  �H  I  �           �5��!�!�!�!     �    �K  .N  �K  .N             �5���;�    �                  �                      k   �k   �k   �k   �k   �k   �k   �k   �k	   �k
+   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   �k   ؤ��@� �P    �2)R��      ^��d^��CA�F�^��   0    :http://lms.knu.ac.kr/ilos/js/ctrl.js?v=20200407 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Wed, 22 Apr 2020 06:11:26 GMT
+ETag: "0-5e5a-5e6b7fe1"
+Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
+Accept-Ranges: bytes
+Content-Length: 24154
+Content-Type: application/javascript
+ original-response-headers Date: Wed, 22 Apr 2020 06:11:26 GMT
+Connection: Keep-Alive
+Keep-Alive: timeout=60
+ETag: "0-5e5a-5e6b7fe1"
+Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
+Accept-Ranges: bytes
+Content-Length: 24154
+Content-Type: application/javascript
+ ctid 2 uncompressed-len 0 net-response-time-onstart 400 net-response-time-onstop 406 alt-data 1;24154,javascript/moz-bytecode-20200403064753 alt-data-from-child 1   �a

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if ! [ -d temp ]; then
+	mkdir temp
+fi
+
+echo "create temp directory.."
+
+cp num1.txt num2.txt mycal.sh temp
+
+echo "copy files to temp directory.."
+
+echo "1)add"
+echo "2)sub"
+echo "3)div"
+echo "4)mul"
+read -p "select menu: " OP
+echo "$OP is selected"
+
+./mycal.sh $OP 

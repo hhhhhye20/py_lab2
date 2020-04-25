@@ -1,0 +1,275 @@
+function _tinyMceEdit(id) {
+  $(id).tinymce({
+    // Location of TinyMCE script
+    script_url : '/ilos/tinymce/tiny_mce.js',
+  
+    elements : id,
+    mode : "exact",
+    // General options
+    theme : "advanced",
+ 
+    plugins : "pagebreak,style,table,advhr,advimage,advlink,iespell,inlinepopups,preview, searchreplace,contextmenu,paste,directionality, noneditable,visualchars,nonbreaking,xhtmlxtras,template,media,advlist,youtube_api_1 ,fmath_simple_latex,autolink",
+    // Theme options
+    theme_advanced_buttons1 : "fontselect,fontsizeselect,bold,italic,underline,strikethrough,separator,sub,sup,separator,cut,copy,paste,|,undo,redo,|,cleanup,newdocument",
+    theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,separator,numlist,bullist,outdent,indent,separator,forecolor,backcolor,separator,link,unlink,table,|,image,media,youtube_api_1 ,|,fmath_simple_latex,|,code",
+    theme_advanced_buttons3 : "",
+    theme_advanced_buttons4 : "",
+    theme_advanced_toolbar_location : "top",
+    theme_advanced_toolbar_align : "left",
+    theme_advanced_statusbar_location : "bottom",
+    
+    /* resize start */
+    theme_advanced_resizing : true,
+    theme_advanced_resize_horizontal : false,
+    theme_advanced_resizing_use_cookie : true,
+    /* resize end */
+  
+    
+    theme_advanced_path : false, 
+    //theme_advanced_blockformats:"h2,h3,h4,p",
+    //autosave_ask_before_unload:false, 
+    language: "ko", 
+        
+    skin : "o2k7",
+    skin_variant : "silver",
+    //end_container_on_empty_block: true,
+    forced_root_block : false,
+    force_br_newlines : false,
+    force_p_newlines : true,
+    
+    relative_urls : false,
+    remove_script_host : false,
+    convert_urls : false,
+    
+    //autoresize_on_init : true,
+    //relative_urls : false,
+    /*
+    paste_text_sticky : false,
+    paste_text_sticky_default : false,
+    paste_auto_cleanup_on_paste : false,
+    paste_remove_styles: false,
+    paste_remove_styles_if_webkit: false,
+    paste_strip_class_attributes: false,
+    */
+    paste_text_sticky : true,
+    paste_text_sticky_default : true,
+    paste_auto_cleanup_on_paste : false,
+    paste_remove_styles: true,
+    paste_remove_styles_if_webkit: true,
+    paste_strip_class_attributes: true,
+    
+    theme_advanced_fonts: "ÎßëÏùÄÍ≥†Îîï='malgun gothic';Íµ¥Î¶º=gulim;ÎèãÏùå=Dotum;Î∞îÌÉï=Batang;Í∂ÅÏÑú=gungsuh;Arial=Arial;Comic Sans MS='Comic Sans MS';Courier New='Courier New';Tahoma=Tahoma;Times New Roman='Times New Roman';Verdana=Verdana",
+
+    execcommand_callback: "tinyExecCommand", //isjo add 2013.06.08
+    
+    // Example content CSS (should be your site CSS)
+    content_css : "/ilos/tinymce/css/content.css?"+  new Date().getTime(),
+    popup_css_add: "/ilos/tinymce/css/tiny_mce_popup.css?"+new Date().getTime(),
+  
+    // Drop lists for link/image/media/template dialogs
+    template_external_list_url : "lists/template_list.js",
+    external_link_list_url : "lists/link_list.js",
+    external_image_list_url : "lists/image_list.js",
+    media_external_list_url : "lists/media_list.js",
+  
+    
+    //valid_elements settings 
+    valid_elements : ""
+      //+"@[accesskey|draggable|style|class|hidden|tabindex|contenteditable|id|title|contextmenu|lang|dir<ltr?rtl|spellcheck|"
+      +"@[style|class|id|title|lang|dir<ltr?rtl|spellcheck|"
+     // +"onabort|onerror|onmousewheel|onblur|onfocus|onpause|oncanplay|onformchange|onplay|oncanplaythrough|onforminput|onplaying|onchange|oninput|onprogress|onclick|oninvalid|onratechange|oncontextmenu|onkeydown|onreadystatechange|ondblclick|onkeypress|onscroll|ondrag|onkeyup|onseeked|ondragend|onload|onseeking|ondragenter|onloadeddata|onselect|ondragleave|onloadedmetadata|onshow|ondragover|onloadstart|onstalled|ondragstart|onmousedown|onsubmit|ondrop|onmousemove|onsuspend|ondurationmouseout|ontimeupdate|onemptied|onmouseover|onvolumechange|onended|onmouseup|onwaiting],"
+    +"a[target<_blank?_self?_top?_parent|ping|media|href|hreflang|type"
+      +"|rel<alternate?archives?author?bookmark?external?feed?first?help?index?last?license?next?nofollow?noreferrer?prev?search?sidebar?tag?up"
+      +"],"
+    //+"abbr,"
+    //+"address,"
+    /*
+    +"area[alt|coords|shape|href|target<_blank?_self?_top?_parent|ping|media|hreflang|type|shape<circle?default?poly?rect"
+      +"|rel<alternate?archives?author?bookmark?external?feed?first?help?index?last?license?next?nofollow?noreferrer?prev?search?sidebar?tag?up"
+      +"],"*/
+    //+"article,"
+    //+"aside,"
+    +"audio[src|preload<none?metadata?auto|autoplay<autoplay|loop<loop|controls<controls|mediagroup],"
+    //+"blockquote[cite],"
+    +"body,"
+    +"br,"
+    /*
+    +"button[autofocus<autofocus|disabled<disabled|form|formaction|formenctype|formmethod<get?put?post?delete|formnovalidate?novalidate|"
+      +"formtarget<_blank?_self?_top?_parent|name|type<reset?submit?button|value],"*/
+    //+"canvas[width,height],"
+    +"caption,"
+    //+"cite,"
+    +"code,"
+    +"col[span],"
+    +"colgroup[span],"
+    //+"command[type<command?checkbox?radio|label|icon|disabled<disabled|checked<checked|radiogroup|default<default],"
+    //+"datalist[data],"
+    +"dd,"
+    +"del[cite|datetime],"
+    //+"details[open<open],"
+    //+"dfn,"
+    +"div,"
+    +"dl,"
+    +"dt,"
+    +"-em/i,"
+    +"embed[src|type|width|height],"
+    //+"eventsource[src],"
+    +"fieldset[disabled<disabled|form|name],"
+    //+"figcaption,"
+    //+"figure,"
+    //+"footer,"
+    //+"form[accept-charset|action|enctype|method<get?post?put?delete|name|novalidate<novalidate|target<_blank?_self?_top?_parent],"
+    +"-h1,-h2,-h3,-h4,-h5,-h6,"
+    +"header,"
+    +"hgroup,"
+    +"hr,"
+    +"iframe[name|src|srcdoc|seamless<seamless|width|height|sandbox|allowfullscreen<?true|webkitallowfullscreen<?true|mozallowfullscreen<?true],"
+    +"img[alt=|src|ismap|usemap|width|height],"
+    /*
+    +"input[accept|alt|autocomplete<on?off|autofocus<autofocus|checked<checked|disabled<disabled"
+      +"|form|formaction|formenctype|formmethod<get?put?post?delete|formnovalidate?novalidate|formtarget<_blank?_self?_top?_parent"
+      +"|height|list|max|maxlength|min|multiple<multiple|name|pattern|placeholder|readonly<readonly|required<required"
+      +"|size|src|step|type<hidden?text?search?tel?url?email?password?datetime?date?month?week?time?datetime-local?number?range?color"
+      +"?checkbox?radio?file?submit?image?reset?button?value|width],"*/
+    //+"ins[cite|datetime],"
+    //+"kbd,"
+    //+"keygen[autofocus<autofocus|challenge|disabled<disabled|form|name],"
+    +"label[for|form],"
+    +"legend,"
+    +"li[value],"
+    //+"mark,"
+    //+"map[name],"
+    //+"menu[type<context?toolbar?list|label],"
+    //+"meter[value|min|low|high|max|optimum],"
+    //+"nav,"
+    //+"noscript,"
+    +"object[data|type|name|usemap|form|width|height],"
+    +"ol[reversed|start],"
+    //+"optgroup[disabled<disabled|label],"
+    //+"option[disabled<disabled|label|selected<selected|value],"
+    //+"output[for|form|name],"
+    +"#p,"
+    +"param[name,value],"
+    +"-pre,"
+    //+"progress[value,max],"
+    //+"q[cite],"
+    //+"ruby,"
+    //+"rp,"
+    //+"rt,"
+    //+"samp,"
+    //+"script[src|async<async|defer<defer|type|charset],"
+    //+"section,"
+    //+"select[autofocus<autofocus|disabled<disabled|form|multiple<multiple|name|size],"
+    +"small,"
+    +"source[src|type|media],"
+    +"-span,"
+    +"-strong/b,"
+    +"-sub,"
+    +"summary,"
+    +"-sup,"
+    +"table,"
+    +"tbody,"
+    +"td[colspan|rowspan|headers],"
+    //+"textarea[autofocus<autofocus|disabled<disabled|form|maxlength|name|placeholder|readonly<readonly|required<required|rows|cols|wrap<soft|hard],"
+    +"tfoot,"
+    +"th[colspan|rowspan|headers|scope],"
+    +"thead,"
+    //+"time[datetime],"
+    +"tr,"
+    +"ul,"
+    //+"var,"
+    +"video[preload<none?metadata?auto|src|crossorigin|poster|autoplay<autoplay|"
+      +"mediagroup|loop<loop|muted<muted|controls<controls|width|height],"
+    //+"wbr",  
+    ,    
+    // Extended options
+    extended_valid_elements : "a[name|href|title|class|target]",
+    //extended_valid_elements :"iframe[src|title|width|height|allowfullscreen|frameborder|class|id|name],object[classid|width|height|codebase|*],param[name|value|_value|*],embed[type|width|height|src|*]",
+    //object_resizing: false,  
+    
+    
+    // Style formats
+    /*
+    style_formats : [
+      {title : 'Bold text', inline : 'b'},
+      {title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
+      {title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
+      {title : 'Example 1', inline : 'span', classes : 'example1'},
+      {title : 'Example 2', inline : 'span', classes : 'example2'},
+      {title : 'Table styles'},
+      {title : 'Table row 1', selector : 'tr', classes : 'tablerow1'}
+    ], */
+    
+    file_browser_callback : 'myFileBrowser',
+    // Replace values for the template plugin
+    template_replace_values : {
+            username : "Some User",
+            staffid : "991234"
+    } 
+    
+  });
+}
+
+function myFileBrowser (field_name, url, type, win) {
+
+  //alert("Field_Name: " + field_name + " nURL: " + url + " nType: " + type + " nWin: " + win); // debug/testing
+
+  /* If you work with sessions in PHP and your client doesn't accept cookies you might need to carry
+     the session name and session ID in the request string (can look like this: "?PHPSESSID=88p0n70s9dsknra96qhuk6etm5").
+     These lines of code extract the necessary parameters and add them back to the filebrowser URL again. */
+
+  var cmsURL = "/ilos/tinymce/file_upload_pop_form.acl";         // script URL - use an absolute path!
+  if (cmsURL.indexOf("?") < 0) {
+      //add the type as the only query parameter
+      cmsURL = cmsURL + "?type=" + type;
+  }
+  else {
+      //add the type as an additional query parameter
+      // (PHP session ID is now included if there is one at all)
+      cmsURL = cmsURL + "&type=" + type;
+  }
+
+  tinyMCE.activeEditor.windowManager.open({
+      file : cmsURL,
+      title : 'My File Browser',
+      width : 380,  // Your dimensions may differ - toy around with them!
+      height : 200,
+      resizable : "yes",
+      inline : "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
+      close_previous : "no"
+  }, {
+      window : win,
+      input : field_name
+  });
+  return false;
+}
+
+//isjo add 2013.06.08
+function tinyExecCommand(editor_id, elm, command, user_interface, value) {
+    var editor = tinyMCE.get(editor_id);
+    switch (command.toLowerCase()) {
+        case "createlink":
+          setTimeout(function() {
+            $(editor.getBody()).find('a').attr('target', '_blank');
+          }, 2000);
+            
+            break;
+    }
+}≥|KÈP      ^ü‡J^ü‡IAñ∂#^èü⁄   E    :http://lms.knu.ac.kr/ilos/tinymce/tiny_mce_board_math_setup.js?v=1.7 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 07 Apr 2020 10:40:02 GMT
+Server: Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.8e-fips-rhel5 DAV/2
+Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
+ETag: "1883968-2a8b-5a0bbd00802c7"
+Accept-Ranges: bytes
+Content-Length: 10891
+Content-Type: application/javascript
+ original-response-headers Date: Tue, 07 Apr 2020 10:40:02 GMT
+Server: Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.8e-fips-rhel5 DAV/2
+Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
+ETag: "1883968-2a8b-5a0bbd00802c7"
+Accept-Ranges: bytes
+Content-Length: 10891
+Keep-Alive: timeout=5, max=58
+Connection: Keep-Alive
+Content-Type: application/javascript
+ ctid 2 uncompressed-len 0 net-response-time-onstart 160 net-response-time-onstop 162   *ã
