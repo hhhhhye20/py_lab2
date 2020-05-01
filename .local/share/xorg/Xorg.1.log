@@ -335,3 +335,4 @@ X Protocol Version 11, Revision 0
 [   256.766] (II) event3  - VirtualPS/2 VMware VMMouse: Enabling spurious button debouncing, see https://wayland.freedesktop.org/libinput/doc/1.10.4/button_debouncing.html for details
 [  1354.181] (EE) client bug: timer event3 debounce short: offset negative (-2ms)
 [  1355.423] (EE) client bug: timer event3 debounce short: offset negative (-0ms)
+[  3046.456] (EE) client bug: timer event3 debounce: offset negative (-9ms)

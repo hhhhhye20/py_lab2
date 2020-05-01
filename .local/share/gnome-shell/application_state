@@ -2,14 +2,15 @@
 <application-state>
   <context id="">
     <application id="gnome-control-center.desktop" open-window-count="0" score="24" last-seen="1587880435"/>
-    <application id="firefox.desktop" open-window-count="1" score="969.34375" last-seen="1587881150"/>
+    <application id="firefox.desktop" open-window-count="1" score="22095.34375" last-seen="1588317393"/>
     <application id="nautilus.desktop" open-window-count="1" score="1" last-seen="1587874869"/>
-    <application id="org.gnome.Nautilus.desktop" open-window-count="0" score="13.765625" last-seen="1587875380"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="1" score="16.765625" last-seen="1588317443"/>
     <application id="update-manager.desktop" open-window-count="0" score="4.3125" last-seen="1587875375"/>
     <application id="software-properties-gtk.desktop" open-window-count="0" score="0" last-seen="1587875358"/>
     <application id="rhythmbox.desktop" open-window-count="0" score="0" last-seen="1587848900"/>
-    <application id="org.gnome.Terminal.desktop" open-window-count="0" score="22198.71875" last-seen="1587875464"/>
-    <application id="org.gnome.Software.desktop" open-window-count="0" score="1.640625" last-seen="1587848894"/>
+    <application id="gnome-terminal.desktop" open-window-count="0" score="0" last-seen="0"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="22198.71875" last-seen="1588317445"/>
+    <application id="org.gnome.Software.desktop" open-window-count="1" score="1.640625" last-seen="1588317401"/>
     <application id="libreoffice-writer.desktop" open-window-count="0" score="0" last-seen="1587848899"/>
   </context>
 </application-state>

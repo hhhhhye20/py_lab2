@@ -2,12 +2,12 @@ accounts.firefox.com:HSTS	1	18346	1616656127537,1,1,2
 snippets.cdn.mozilla.net:HSTS	1	18381	1619705513711,1,0,2
 www.youtube.com:HSTS	0	18381	1619705530132,1,0,2
 www.google.com^firstPartyDomain=google.search.suggestions.mozilla:HSTS	0	18359	1617791579764,1,0,2
-firefox.settings.services.mozilla.com:HSTS	9	18381	1619708481967,1,0,2
+firefox.settings.services.mozilla.com:HSTS	10	18383	1619854172214,1,0,2
 www.mozilla.org:HSTS	1	18346	1616483093668,1,0,2
 accounts.google.com:HSTS	0	18381	1619705533017,1,1,2
-incoming.telemetry.mozilla.org:HSTS	10	18381	1603940162540,1,0,2
+incoming.telemetry.mozilla.org:HSTS	11	18383	1604085380161,1,0,2
 pm.pstatic.net:HSTS	0	18346	1648182181351,1,1,2
-services.addons.mozilla.org:HSTS	9	18381	1619708603804,1,0,2
+services.addons.mozilla.org:HSTS	10	18383	1619854293108,1,0,2
 ssl.pstatic.net:HSTS	0	18346	1616646181226,1,0,2
 fonts.googleapis.com:HSTS	0	18381	1619705532132,1,0,2
 mozilla.org:HSTS	1	18381	1616483094766,1,0,2
@@ -16,5 +16,5 @@ shavar.services.mozilla.com^firstPartyDomain=safebrowsing.86868755-6b82-4842-b30
 s.pstatic.net:HSTS	0	18346	1616647805523,1,0,2
 location.services.mozilla.com:HSTS	0	18344	1616483091938,1,1,2
 nid.naver.com:HSTS	0	18346	1600877903572,1,0,2
-normandy.cdn.mozilla.net:HSTS	9	18381	1619705650783,1,0,2
-aus5.mozilla.org:HSTS	9	18381	1619708604044,1,0,2
+normandy.cdn.mozilla.net:HSTS	10	18383	1619855599831,1,0,2
+aus5.mozilla.org:HSTS	10	18383	1619854293587,1,0,2
