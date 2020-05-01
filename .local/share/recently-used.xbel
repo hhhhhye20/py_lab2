@@ -124,12 +124,52 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/hyeye/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7,%202020-04-26%2005-50-14.png" added="2020-04-25T20:50:16Z" modified="2020-04-25T20:50:16Z" visited="2020-04-25T20:50:17.126589Z">
+  <bookmark href="file:///home/hyeye/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7,%202020-04-26%2005-50-14.png" added="2020-04-25T20:50:16Z" modified="2020-04-25T20:50:16Z" visited="2020-04-25T20:50:17Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
           <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2020-04-25T20:50:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/myprog_pkg.py" added="2020-04-29T14:13:57Z" modified="2020-04-29T14:13:57Z" visited="2020-04-29T14:13:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-04-29T14:13:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/my_pkg/__init__.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08.000862Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-04-29T14:14:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/my_pkg/conversion.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08.000883Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-04-29T14:14:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/my_pkg/unionintersection.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08.000902Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-04-29T14:14:07Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

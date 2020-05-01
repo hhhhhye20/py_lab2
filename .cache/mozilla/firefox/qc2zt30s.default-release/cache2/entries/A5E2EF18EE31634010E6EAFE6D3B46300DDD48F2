@@ -909,21 +909,19 @@
   // Register plugin
   tinymce.PluginManager.add('media', tinymce.plugins.MediaPlugin);
 })();
-_Óﬂ      ^ü‡L^ü‡KAñ∂%^èü‹   A    :http://lms.knu.ac.kr/ilos/tinymce/plugins/media/editor_plugin.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+ï{,ﬂ           ^©ãAùi–^Øø€   A    :http://lms.knu.ac.kr/ilos/tinymce/plugins/media/editor_plugin.js strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Wed, 29 Apr 2020 14:13:19 GMT
+ETag: "0-73b4-5e6b7fe1"
 Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
-ETag: "1883983-73b4-5a0bbd00806af"
 Accept-Ranges: bytes
 Content-Length: 29620
 Content-Type: application/javascript
-Date: Tue, 07 Apr 2020 10:40:03 GMT
-Server: Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.8e-fips-rhel5 DAV/2
- original-response-headers Date: Wed, 25 Mar 2020 08:15:48 GMT
-Server: Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.8e-fips-rhel5 DAV/2
-Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
-ETag: "1883983-73b4-5a0bbd00806af"
-Accept-Ranges: bytes
-Content-Length: 29620
-Keep-Alive: timeout=5, max=51
+ original-response-headers Date: Wed, 29 Apr 2020 14:13:19 GMT
 Connection: Keep-Alive
+Keep-Alive: timeout=60
+ETag: "0-73b4-5e6b7fe1"
+Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
+Accept-Ranges: bytes
+Content-Length: 29620
 Content-Type: application/javascript
- ctid 2 uncompressed-len 0 net-response-time-onstart 73 net-response-time-onstop 81   s¥
+ ctid 2 uncompressed-len 0   s¥
