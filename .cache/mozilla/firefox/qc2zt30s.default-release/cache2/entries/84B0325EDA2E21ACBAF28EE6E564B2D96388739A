@@ -255,13 +255,13 @@ function tinyExecCommand(editor_id, elm, command, user_interface, value) {
             
             break;
     }
-}–aP           ^©ã|AùiŒ^Øøÿ   E    :http://lms.knu.ac.kr/ilos/tinymce/tiny_mce_board_math_setup.js?v=1.7 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
-Date: Wed, 29 Apr 2020 14:13:16 GMT
+}Î‘lP      ^Õ{^Õ{A∂[^÷Y˚   E    :http://lms.knu.ac.kr/ilos/tinymce/tiny_mce_board_math_setup.js?v=1.7 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 ETag: "0-2a8b-5e6b7fe1"
 Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
 Accept-Ranges: bytes
 Content-Length: 10891
 Content-Type: application/javascript
+Date: Wed, 27 May 2020 09:58:04 GMT
  original-response-headers Date: Wed, 29 Apr 2020 14:13:16 GMT
 Connection: Keep-Alive
 Keep-Alive: timeout=60
@@ -270,4 +270,4 @@ Last-Modified: Fri, 13 Mar 2020 12:43:13 GMT
 Accept-Ranges: bytes
 Content-Length: 10891
 Content-Type: application/javascript
- ctid 2 uncompressed-len 0   *ã
+ ctid 2 uncompressed-len 0 necko:classified 1   *ã

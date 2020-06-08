@@ -37,15 +37,6 @@
     <media-type>application/octet-stream</media-type>
   </entry>
   <entry type="iradio">
-    <title>WSUM 91.7 FM (University of Wisconsin)</title>
-    <genre>College Radio</genre>
-    <artist></artist>
-    <album></album>
-    <location>http://vu.wsum.wisc.edu/wsumlive.m3u</location>
-    <date>0</date>
-    <media-type>application/octet-stream</media-type>
-  </entry>
-  <entry type="iradio">
     <title>WUVT-FM 90.7 (Virginia Tech) (High Quality)</title>
     <genre>College Radio</genre>
     <artist></artist>
@@ -60,6 +51,15 @@
     <artist></artist>
     <album></album>
     <location>https://stream.wuvt.vt.edu/wuvt.ogg</location>
+    <date>0</date>
+    <media-type>application/octet-stream</media-type>
+  </entry>
+  <entry type="iradio">
+    <title>WSUM 91.7 FM (University of Wisconsin)</title>
+    <genre>College Radio</genre>
+    <artist></artist>
+    <album></album>
+    <location>http://vu.wsum.wisc.edu/wsumlive.m3u</location>
     <date>0</date>
     <media-type>application/octet-stream</media-type>
   </entry>

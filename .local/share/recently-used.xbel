@@ -144,7 +144,7 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/hyeye/my_pkg/__init__.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08.000862Z">
+  <bookmark href="file:///home/hyeye/my_pkg/__init__.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/x-python"/>
@@ -154,7 +154,7 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/hyeye/my_pkg/conversion.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08.000883Z">
+  <bookmark href="file:///home/hyeye/my_pkg/conversion.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/x-python"/>
@@ -164,12 +164,203 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/hyeye/my_pkg/unionintersection.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08.000902Z">
+  <bookmark href="file:///home/hyeye/my_pkg/unionintersection.py" added="2020-04-29T14:14:07Z" modified="2020-04-29T14:14:07Z" visited="2020-04-29T14:14:08Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/x-python"/>
         <bookmark:applications>
           <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-04-29T14:14:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/app.py" added="2020-05-13T12:19:17Z" modified="2020-05-18T14:17:15Z" visited="2020-05-13T12:19:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-18T14:17:15Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/templates/fibo.html" added="2020-05-13T12:19:25Z" modified="2020-05-13T12:19:25Z" visited="2020-05-13T12:19:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-13T12:19:25Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/templates/home.html" added="2020-05-13T12:19:25Z" modified="2020-05-13T12:19:25Z" visited="2020-05-13T12:19:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-13T12:19:25Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_hyeye0/app.py" added="2020-05-18T14:17:28Z" modified="2020-05-31T13:45:08Z" visited="2020-05-18T14:17:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-31T13:45:03Z" count="3"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-05-31T13:45:08Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_hyeye0/app-1.py" added="2020-05-18T14:17:56Z" modified="2020-05-31T13:49:18Z" visited="2020-05-18T14:17:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-05-31T13:49:18Z" count="2"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-31T13:49:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/elasticsearch-7.6.2/el_pra.py" added="2020-05-27T09:58:44Z" modified="2020-05-27T09:58:44Z" visited="2020-05-27T09:58:45Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-27T09:58:44Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_hyeye0/fibo.html" added="2020-05-31T13:46:19Z" modified="2020-05-31T13:46:19Z" visited="2020-05-31T13:46:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-31T13:46:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/home.html" added="2020-05-31T13:46:57Z" modified="2020-05-31T13:46:57Z" visited="2020-05-31T13:46:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-31T13:46:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_hyeye0/home.html" added="2020-05-31T13:47:28Z" modified="2020-05-31T13:47:28Z" visited="2020-05-31T13:47:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-05-31T13:47:28Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/new/git.txt" added="2020-06-05T01:36:27Z" modified="2020-06-05T07:25:25Z" visited="2020-06-05T01:36:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-06-05T07:25:25Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/mycal.shh" added="2020-06-05T05:03:33Z" modified="2020-06-05T05:03:33Z" visited="2020-06-05T05:03:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-06-05T05:03:33Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/myprog_setup.shh" added="2020-06-05T05:04:24Z" modified="2020-06-05T05:04:24Z" visited="2020-06-05T05:04:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-06-05T05:04:24Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/urls.txt" added="2020-06-05T07:33:57Z" modified="2020-06-05T08:23:31Z" visited="2020-06-05T07:33:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-06-05T08:23:31Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/urlurl.txt" added="2020-06-05T08:26:36Z" modified="2020-06-08T11:05:31Z" visited="2020-06-05T08:26:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-06-08T11:05:31Z" count="19"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-06-06T06:13:51Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/a_p.py" added="2020-06-07T07:02:32Z" modified="2020-06-07T07:02:32Z" visited="2020-06-07T07:02:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-06-07T07:02:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/flask_up.py" added="2020-06-07T07:02:46Z" modified="2020-06-07T07:02:46Z" visited="2020-06-07T07:02:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-06-07T07:02:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hyeye/myprog.py" added="2020-06-07T07:03:23Z" modified="2020-06-07T07:03:23Z" visited="2020-06-07T07:03:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-06-07T07:03:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

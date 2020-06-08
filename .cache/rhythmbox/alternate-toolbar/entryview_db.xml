@@ -3,13 +3,13 @@
   <pages>
     <page name="RBLibrarySource">'&#53944;&#47001;','&#51228;&#47785;','&#51109;&#47476;','&#51020;&#50501;&#44032;','&#50536;&#48276;','&#51089;&#44257;&#44032;','&#50672;&#46020;','&#49884;&#44036;','&#54408;&#51656;','&#51116;&#49373; &#54943;&#49688;','&#48149;&#51088;','&#49444;&#47749;','&#50948;&#52824;','&#51216;&#49688;','&#52572;&#44540;&#50640; &#50672;&#51452;&#54632;','&#52628;&#44032;&#54620; &#45216;&#51676;'</page>
     <RBLibrarySource column="&#53944;&#47001;" width="41" />
-    <RBLibrarySource column="&#51228;&#47785;" width="99" />
-    <RBLibrarySource column="&#51109;&#47476;" width="99" />
-    <RBLibrarySource column="&#51020;&#50501;&#44032;" width="113" />
-    <RBLibrarySource column="&#50536;&#48276;" width="101" />
+    <RBLibrarySource column="&#51228;&#47785;" width="544" />
+    <RBLibrarySource column="&#51109;&#47476;" width="544" />
+    <RBLibrarySource column="&#51020;&#50501;&#44032;" width="558" />
+    <RBLibrarySource column="&#50536;&#48276;" width="544" />
     <RBLibrarySource column="&#51089;&#44257;&#44032;" width="0" />
     <RBLibrarySource column="&#50672;&#46020;" width="0" />
-    <RBLibrarySource column="&#49884;&#44036;" width="89" />
+    <RBLibrarySource column="&#49884;&#44036;" width="71" />
     <RBLibrarySource column="&#54408;&#51656;" width="0" />
     <RBLibrarySource column="&#51116;&#49373;&#54943;&#49688;" width="0" />
     <RBLibrarySource column="&#48149;&#51088;" width="0" />

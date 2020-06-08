@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rhythmdb-playlists>
-  <playlist name="&#xC778;&#xAE30;&#xC21C;" show-browser="true" browser-position="167" search-type="search-match" type="automatic" sort-key="Rating" sort-direction="1">
+  <playlist name="&#xC778;&#xAE30;&#xC21C;" show-browser="true" browser-position="159" search-type="search-match" type="automatic" sort-key="Rating" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -10,7 +10,7 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="&#xCD5C;&#xADFC; &#xC7AC;&#xC0DD;&#xC21C;" show-browser="true" browser-position="167" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
+  <playlist name="&#xCD5C;&#xADFC; &#xC7AC;&#xC0DD;&#xC21C;" show-browser="true" browser-position="159" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -20,7 +20,7 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="&#xCD5C;&#xADFC; &#xCD94;&#xAC00;&#xC21C;" show-browser="true" browser-position="167" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
+  <playlist name="&#xCD5C;&#xADFC; &#xCD94;&#xAC00;&#xC21C;" show-browser="true" browser-position="159" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
